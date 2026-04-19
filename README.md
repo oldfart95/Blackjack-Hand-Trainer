@@ -48,14 +48,20 @@ npm run preview
 
 This repository is configured with Vite base path defaulting to `/Blackjack-Hand-Trainer/`.
 
-1. Build static output:
+### Automatic deploy (recommended)
 
-   ```bash
-   npm install
-   npm run build
-   ```
+A workflow is included at `.github/workflows/deploy-pages.yml` and deploys on every push to `main`.
 
-2. Publish `dist/` to GitHub Pages (via Actions or `gh-pages` branch).
+1. In GitHub repo settings, go to **Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Push to `main` and the site will deploy automatically.
+
+### Manual build
+
+```bash
+npm install
+npm run build
+```
 
 If your repo path differs, set `VITE_BASE`:
 
